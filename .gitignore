@@ -1,0 +1,29 @@
+# 可执行文件
+algorithm_experiment
+*.exe
+
+# 编译中间文件
+*.o
+*.obj
+*.out
+
+# 临时文件
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# 自动生成的 CSV 文件
+data/sorting/*.csv
+data/knapsack/*.csv
+results/sorting/*.csv
+results/knapsack/*.csv
+
+# 自动生成的图片文件
+figures/*.png
+figures/*.jpg
+figures/*.jpeg
+figures/*.pdf
+
+# 保留 .gitkeep 文件
+!.gitkeep
