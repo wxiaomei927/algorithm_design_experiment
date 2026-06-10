@@ -24,6 +24,7 @@ figures/*.png
 figures/*.jpg
 figures/*.jpeg
 figures/*.pdf
+!figures/sorting_*.png
 
 # 保留 .gitkeep 文件
 !.gitkeep
