@@ -28,3 +28,9 @@ figures/*.pdf
 
 # 保留 .gitkeep 文件
 !.gitkeep
+
+# 报告草稿
+docs/*_draft.md
+
+# 调试日志
+debug.log

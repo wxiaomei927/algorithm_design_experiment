@@ -15,6 +15,7 @@ SRC = $(SRCDIR)/main.c \
       $(SORTING_DIR)/merge_sort.c \
       $(SORTING_DIR)/quick_sort.c \
       $(SORTING_DIR)/sorting_test.c \
+      $(KNAPSACK_DIR)/knapsack_utils.c \
       $(KNAPSACK_DIR)/brute_force.c \
       $(KNAPSACK_DIR)/dynamic_programming.c \
       $(KNAPSACK_DIR)/greedy.c \
