@@ -1,20 +1,14 @@
 #include "sorting.h"
 #include <stdlib.h>
+#include <stdio.h>
 
-// 合并两个有序子数组
-// left: 左子数组起始索引
-// mid: 左子数组结束索引，右子数组起始索引 = mid + 1
-// right: 右子数组结束索引
-static void merge(int arr[], int left, int mid, int right) {
-    // 计算两个子数组的长度
+static void merge(int arr[], int left, int mid, int right, long long *comparisons) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
     
-    // 创建临时数组存储两个子数组
     int *L = (int *)malloc(n1 * sizeof(int));
     int *R = (int *)malloc(n2 * sizeof(int));
     
-    // 将数据复制到临时数组
     for (int i = 0; i < n1; i++) {
         L[i] = arr[left + i];
     }
@@ -22,13 +16,10 @@ static void merge(int arr[], int left, int mid, int right) {
         R[j] = arr[mid + 1 + j];
     }
     
-    // 合并两个临时数组回原数组
-    int i = 0;  // 左子数组的索引
-    int j = 0;  // 右子数组的索引
-    int k = left;  // 原数组的索引
+    int i = 0, j = 0, k = left;
     
-    // 比较两个子数组的元素，选择较小的放入原数组
     while (i < n1 && j < n2) {
+        (*comparisons)++;
         if (L[i] <= R[j]) {
             arr[k] = L[i];
             i++;
@@ -39,48 +30,121 @@ static void merge(int arr[], int left, int mid, int right) {
         k++;
     }
     
-    // 将左子数组剩余元素复制到原数组
     while (i < n1) {
         arr[k] = L[i];
         i++;
         k++;
     }
     
-    // 将右子数组剩余元素复制到原数组
     while (j < n2) {
         arr[k] = R[j];
         j++;
         k++;
     }
     
-    // 释放临时数组内存
     free(L);
     free(R);
 }
 
-// 归并排序递归函数
-static void merge_sort_recursive(int arr[], int left, int right) {
-    // 递归终止条件：当左边界 >= 右边界时
+static void merge_sort_recursive(int arr[], int left, int right, long long *comparisons) {
     if (left < right) {
-        // 找到中间位置
         int mid = left + (right - left) / 2;
         
-        // 递归排序左半部分
-        merge_sort_recursive(arr, left, mid);
-        // 递归排序右半部分
-        merge_sort_recursive(arr, mid + 1, right);
+        merge_sort_recursive(arr, left, mid, comparisons);
+        merge_sort_recursive(arr, mid + 1, right, comparisons);
         
-        // 合并两个有序部分
-        merge(arr, left, mid, right);
+        merge(arr, left, mid, right, comparisons);
     }
 }
 
-void merge_sort(int arr[], int n) {
-    // 如果数组为空或只有一个元素，无需排序
+long long merge_sort(int arr[], int n) {
+    long long comparisons = 0;
+    
     if (n <= 1) {
-        return;
+        return comparisons;
     }
     
-    // 调用递归函数进行排序
-    merge_sort_recursive(arr, 0, n - 1);
+    merge_sort_recursive(arr, 0, n - 1, &comparisons);
+    
+    return comparisons;
+}
+
+// 带递归记录的合并排序
+
+static void merge_sort_recursive_with_recursion(int arr[], int left, int right, 
+                                               long long *comparisons,
+                                               int record_recursion, FILE *recursion_fp,
+                                               int original_n, int *call_index, int recursion_depth,
+                                               int *max_depth, int *min_subproblem, int *max_subproblem) {
+    int subproblem_size = right - left + 1;
+    
+    // 更新递归统计信息
+    (*call_index)++;
+    if (recursion_depth > *max_depth) *max_depth = recursion_depth;
+    if (subproblem_size < *min_subproblem) *min_subproblem = subproblem_size;
+    if (subproblem_size > *max_subproblem) *max_subproblem = subproblem_size;
+    
+    // 记录递归调用信息到文件
+    if (record_recursion && recursion_fp != NULL) {
+        fprintf(recursion_fp, "merge_sort,%d,%d,%d,%d\n", 
+                original_n, *call_index, recursion_depth, subproblem_size);
+    }
+    
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+        
+        merge_sort_recursive_with_recursion(arr, left, mid, comparisons,
+                                           record_recursion, recursion_fp,
+                                           original_n, call_index, recursion_depth + 1,
+                                           max_depth, min_subproblem, max_subproblem);
+        merge_sort_recursive_with_recursion(arr, mid + 1, right, comparisons,
+                                           record_recursion, recursion_fp,
+                                           original_n, call_index, recursion_depth + 1,
+                                           max_depth, min_subproblem, max_subproblem);
+        
+        merge(arr, left, mid, right, comparisons);
+    }
+}
+
+long long merge_sort_with_recursion(int arr[], int n, int record_recursion, 
+                                    const char *recursion_file, int original_n) {
+    long long comparisons = 0;
+    
+    if (n <= 1) {
+        return comparisons;
+    }
+    
+    FILE *recursion_fp = NULL;
+    if (record_recursion && recursion_file != NULL) {
+        recursion_fp = fopen(recursion_file, "a");
+        if (recursion_fp == NULL) {
+            record_recursion = 0;
+        }
+    }
+    
+    int call_index = 0;
+    int max_depth = 0;
+    int min_subproblem = n;
+    int max_subproblem = 0;
+    
+    merge_sort_recursive_with_recursion(arr, 0, n - 1, &comparisons,
+                                       record_recursion, recursion_fp,
+                                       original_n, &call_index, 0,
+                                       &max_depth, &min_subproblem, &max_subproblem);
+    
+    // 写入汇总信息到单独的文件
+    if (record_recursion) {
+        FILE *summary_fp = fopen("results/sorting/recursion_summary.csv", "a");
+        if (summary_fp != NULL) {
+            fprintf(summary_fp, "merge_sort,%d,%d,%d,%d,%d\n", 
+                    n, call_index, max_depth, min_subproblem, max_subproblem);
+            fclose(summary_fp);
+        }
+    }
+    
+    if (recursion_fp != NULL) {
+        fclose(recursion_fp);
+    }
+    
+    return comparisons;
 }

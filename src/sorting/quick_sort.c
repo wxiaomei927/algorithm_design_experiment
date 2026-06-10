@@ -1,59 +1,127 @@
 #include "sorting.h"
+#include <stdio.h>
 
-// 交换两个整数
 static void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-// 分区函数：选择区间末尾元素作为主元
-// 返回主元最终的位置索引
-static int partition(int arr[], int low, int high) {
-    // 选择区间末尾元素作为主元
+static int partition(int arr[], int low, int high, long long *comparisons) {
     int pivot = arr[high];
-    
-    // i 指向小于等于主元的区域的最后一个元素
     int i = low - 1;
     
-    // 遍历整个区间（不包括主元）
     for (int j = low; j < high; j++) {
-        // 如果当前元素小于等于主元
+        (*comparisons)++;
         if (arr[j] <= pivot) {
-            // 将 i 向后移动一位
             i++;
-            // 交换 arr[i] 和 arr[j]，将当前元素放到小于等于主元的区域
             swap(&arr[i], &arr[j]);
         }
     }
     
-    // 将主元放到正确的位置（i+1）
     swap(&arr[i + 1], &arr[high]);
     
-    // 返回主元的最终位置
     return i + 1;
 }
 
-// 快速排序递归函数
-static void quick_sort_recursive(int arr[], int low, int high) {
-    // 递归终止条件：当 low >= high 时
+static void quick_sort_recursive(int arr[], int low, int high, long long *comparisons) {
     if (low < high) {
-        // 分区，获取主元位置
-        int pi = partition(arr, low, high);
+        int pi = partition(arr, low, high, comparisons);
         
-        // 递归排序左半部分（小于主元的元素）
-        quick_sort_recursive(arr, low, pi - 1);
-        // 递归排序右半部分（大于主元的元素）
-        quick_sort_recursive(arr, pi + 1, high);
+        quick_sort_recursive(arr, low, pi - 1, comparisons);
+        quick_sort_recursive(arr, pi + 1, high, comparisons);
     }
 }
 
-void quick_sort(int arr[], int n) {
-    // 如果数组为空或只有一个元素，无需排序
+long long quick_sort(int arr[], int n) {
+    long long comparisons = 0;
+    
     if (n <= 1) {
-        return;
+        return comparisons;
     }
     
-    // 调用递归函数进行排序
-    quick_sort_recursive(arr, 0, n - 1);
+    quick_sort_recursive(arr, 0, n - 1, &comparisons);
+    
+    return comparisons;
+}
+
+// 带递归记录的快速排序
+
+static void quick_sort_recursive_with_recursion(int arr[], int low, int high, 
+                                               long long *comparisons,
+                                               int record_recursion, FILE *recursion_fp,
+                                               int original_n, int *call_index, int recursion_depth,
+                                               int *max_depth, int *min_subproblem, int *max_subproblem) {
+    // 仅当 low <= high 时记录（避免记录空区间）
+    if (low <= high) {
+        int subproblem_size = high - low + 1;
+        
+        // 更新递归统计信息
+        (*call_index)++;
+        if (recursion_depth > *max_depth) *max_depth = recursion_depth;
+        if (subproblem_size < *min_subproblem) *min_subproblem = subproblem_size;
+        if (subproblem_size > *max_subproblem) *max_subproblem = subproblem_size;
+        
+        // 记录递归调用信息到文件
+        if (record_recursion && recursion_fp != NULL) {
+            fprintf(recursion_fp, "quick_sort,%d,%d,%d,%d\n", 
+                    original_n, *call_index, recursion_depth, subproblem_size);
+        }
+        
+        if (low < high) {
+            int pi = partition(arr, low, high, comparisons);
+            
+            quick_sort_recursive_with_recursion(arr, low, pi - 1, comparisons,
+                                               record_recursion, recursion_fp,
+                                               original_n, call_index, recursion_depth + 1,
+                                               max_depth, min_subproblem, max_subproblem);
+            quick_sort_recursive_with_recursion(arr, pi + 1, high, comparisons,
+                                               record_recursion, recursion_fp,
+                                               original_n, call_index, recursion_depth + 1,
+                                               max_depth, min_subproblem, max_subproblem);
+        }
+    }
+}
+
+long long quick_sort_with_recursion(int arr[], int n, int record_recursion, 
+                                    const char *recursion_file, int original_n) {
+    long long comparisons = 0;
+    
+    if (n <= 1) {
+        return comparisons;
+    }
+    
+    FILE *recursion_fp = NULL;
+    if (record_recursion && recursion_file != NULL) {
+        recursion_fp = fopen(recursion_file, "a");
+        if (recursion_fp == NULL) {
+            record_recursion = 0;
+        }
+    }
+    
+    int call_index = 0;
+    int max_depth = 0;
+    int min_subproblem = n;
+    int max_subproblem = 0;
+    
+    quick_sort_recursive_with_recursion(arr, 0, n - 1, &comparisons,
+                                       record_recursion, recursion_fp,
+                                       original_n, &call_index, 0,
+                                       &max_depth, &min_subproblem, &max_subproblem);
+    
+    // 写入汇总信息到单独的文件
+    if (record_recursion) {
+        FILE *summary_fp = fopen("results/sorting/recursion_summary.csv", "a");
+        if (summary_fp != NULL) {
+            fprintf(summary_fp, "quick_sort,%d,%d,%d,%d,%d\n", 
+                    n, call_index, max_depth, min_subproblem, max_subproblem);
+            fclose(summary_fp);
+        }
+    }
+    
+    if (recursion_fp != NULL) {
+        fclose(recursion_fp);
+    }
+    
+    return comparisons;
 }
