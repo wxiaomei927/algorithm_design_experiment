@@ -10,6 +10,8 @@ KnapsackResult brute_force_knapsack(Item *items, int n, int capacity) {
     strcpy(result.algorithm, "brute_force");
     result.elapsed_ms = -1;
     result.visited_nodes = 0;
+    // 空间估算：最优物品编号数组(n个int) + 位掩码(long long) + 临时变量
+    result.estimated_memory_bytes = n * sizeof(int) + sizeof(long long) + 64;
 
     if (n > 25) {
         strcpy(result.status, "skipped");

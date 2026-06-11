@@ -15,7 +15,9 @@ int main(int argc, char *argv[]) {
         printf("2. 运行两组 100 个随机数排序实验\n");
         printf("3. 运行完整排序批量实验\n");
         printf("4. 运行背包小规模正确性验证\n");
-        printf("5. 退出\n");
+        printf("5. 运行背包正式规模实验\n");
+        printf("6. 退出\n");
+        printf("7. 运行作业要求规模的背包实验\n");
         printf("===============================\n");
         printf("请输入选择: ");
 
@@ -39,8 +41,14 @@ int main(int argc, char *argv[]) {
             run_knapsack_small_scale_validation();
             break;
         case 5:
+            run_knapsack_scaled_experiment();
+            break;
+        case 6:
             printf("程序退出\n");
             return 0;
+        case 7:
+            run_knapsack_required_experiment();
+            break;
         default:
             printf("无效选项\n");
             return 1;

@@ -23,9 +23,9 @@ KnapsackResult dynamic_programming_knapsack(Item *items, int n, int capacity) {
     long long keep_mem = (long long)(n + 1) * (capacity + 1) * sizeof(int);
     result.estimated_memory_bytes = mem_needed + keep_mem;
 
-    if (mem_needed > (long long)1024 * 1024 * 1024) {
+    if (result.estimated_memory_bytes > (long long)512 * 1024 * 1024) {
         strcpy(result.status, "skipped");
-        strcpy(result.note, "skipped due to excessive memory requirement");
+        strcpy(result.note, "skipped because estimated DP memory exceeds 512 MB");
         return result;
     }
 

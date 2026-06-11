@@ -18,6 +18,7 @@ KnapsackResult greedy_knapsack(Item *items, int n, int capacity) {
     strcpy(result.algorithm, "greedy");
     result.elapsed_ms = -1;
     result.visited_nodes = 0;
+    result.estimated_memory_bytes = n * sizeof(Item) + n * sizeof(int);
 
     Item *sorted = (Item *)malloc(n * sizeof(Item));
     memcpy(sorted, items, n * sizeof(Item));
@@ -48,7 +49,10 @@ KnapsackResult greedy_knapsack(Item *items, int n, int capacity) {
     result.selected_item_ids = (int *)malloc(count * sizeof(int));
     memcpy(result.selected_item_ids, temp_ids, count * sizeof(int));
     strcpy(result.status, "completed");
-    strcpy(result.note, "approximation strategy, not guaranteed to be globally optimal for 0-1 knapsack");
+    strcpy(result.note, "approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack");
+
+    // 验证选择结果
+    validate_selected_items(items, n, capacity, &result);
 
     free(sorted);
     free(temp_ids);

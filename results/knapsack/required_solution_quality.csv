@@ -1,0 +1,46 @@
+n,capacity,seed,reference_algorithm,reference_value,greedy_value,greedy_gap,greedy_gap_percent,status,note
+1000,10000,20261801,dynamic_programming_optimized,127424.22,127384.18,40.04,0.03,completed,
+1000,100000,20261801,dynamic_programming_optimized,267774.93,267774.93,-0.00,-0.00,completed,
+1000,1000000,20261801,,,267774.930000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+2000,10000,20262801,dynamic_programming_optimized,176585.21,176514.19,71.02,0.04,completed,
+2000,100000,20262801,dynamic_programming_optimized,531881.09,531878.81,2.28,0.00,completed,
+2000,1000000,20262801,,,532500.160000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+3000,10000,20263801,dynamic_programming_optimized,215258.00,215249.57,8.43,0.00,completed,
+3000,100000,20263801,dynamic_programming_optimized,674232.23,674232.23,-0.00,-0.00,completed,
+3000,1000000,20263801,,,790082.970000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+4000,10000,20264801,dynamic_programming_optimized,250525.36,250512.89,12.47,0.00,completed,
+4000,100000,20264801,dynamic_programming_optimized,788962.55,788953.41,9.14,0.00,completed,
+4000,1000000,20264801,,,1061302.160000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+5000,10000,20265801,dynamic_programming_optimized,269219.66,269178.64,41.02,0.02,completed,
+5000,100000,20265801,dynamic_programming_optimized,879722.96,879708.95,14.01,0.00,completed,
+5000,1000000,20265801,,,1314460.570000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+6000,10000,20266801,dynamic_programming_optimized,306185.51,306109.26,76.25,0.02,completed,
+6000,100000,20266801,,,974922.600000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+6000,1000000,20266801,,,1585633.530000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+7000,10000,20267801,dynamic_programming_optimized,324314.68,324215.09,99.59,0.03,completed,
+7000,100000,20267801,,,1037907.380000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+7000,1000000,20267801,,,1850857.390000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+8000,10000,20268801,dynamic_programming_optimized,342441.75,342439.77,1.98,0.00,completed,
+8000,100000,20268801,,,1106436.660000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+8000,1000000,20268801,,,2111973.760000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+9000,10000,20269801,dynamic_programming_optimized,367121.03,367102.85,18.18,0.00,completed,
+9000,100000,20269801,,,1188889.940000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+9000,1000000,20269801,,,2372691.210000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+10000,10000,20270801,dynamic_programming_optimized,370976.86,370955.93,20.93,0.01,completed,
+10000,100000,20270801,,,1221940.740000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+10000,1000000,20270801,,,2629073.280000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+20000,10000,20280801,dynamic_programming_optimized,542791.46,542762.17,29.29,0.01,completed,
+20000,100000,20280801,,,1767333.430000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+20000,1000000,20280801,,,5292818.600000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+40000,10000,20300801,dynamic_programming_optimized,750080.96,750080.96,-0.00,-0.00,completed,
+40000,100000,20300801,,,2468798.950000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+40000,1000000,20300801,,,7893594.510000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+80000,10000,20340801,,,1016942.880000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+80000,100000,20340801,,,3429377.560000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+80000,1000000,20340801,,,11088678.110000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+160000,10000,20420801,,,1378160.970000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+160000,100000,20420801,,,4793848.720000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+160000,1000000,20420801,,,15643142.610000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+320000,10000,20580801,,,1844758.180000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+320000,100000,20580801,,,6629029.750000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable
+320000,1000000,20580801,,,21947123.030000,,,unavailable,DP skipped; greedy value retained but optimality gap unavailable

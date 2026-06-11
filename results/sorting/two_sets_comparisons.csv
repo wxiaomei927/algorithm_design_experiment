@@ -1,0 +1,7 @@
+dataset_id,seed,n,algorithm,comparisons,sorted_correctly
+1,20260601,100,bubble_sort,4779,yes
+1,20260601,100,merge_sort,548,yes
+1,20260601,100,quick_sort,582,yes
+2,20260602,100,bubble_sort,4895,yes
+2,20260602,100,merge_sort,547,yes
+2,20260602,100,quick_sort,614,yes

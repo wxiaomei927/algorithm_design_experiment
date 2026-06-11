@@ -18,6 +18,7 @@ SRC = $(SRCDIR)/main.c \
       $(KNAPSACK_DIR)/knapsack_utils.c \
       $(KNAPSACK_DIR)/brute_force.c \
       $(KNAPSACK_DIR)/dynamic_programming.c \
+      $(KNAPSACK_DIR)/dynamic_programming_optimized.c \
       $(KNAPSACK_DIR)/greedy.c \
       $(KNAPSACK_DIR)/backtracking.c \
       $(KNAPSACK_DIR)/knapsack_test.c

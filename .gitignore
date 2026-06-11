@@ -19,6 +19,18 @@ data/knapsack/*.csv
 results/sorting/*.csv
 results/knapsack/*.csv
 
+# 保留正式实验数据
+!data/knapsack/required_items_1000.csv
+!results/knapsack/required_scale_results.csv
+!results/knapsack/required_solution_quality.csv
+!results/knapsack/required_selected_items.csv
+!results/knapsack/required_selected_items_audit.csv
+!results/sorting/two_sets_comparisons.csv
+!results/sorting/scaled_sorting_results.csv
+!results/sorting/merge_recursion_sizes.csv
+!results/sorting/quick_recursion_sizes.csv
+!results/sorting/recursion_summary.csv
+
 # 自动生成的图片文件
 figures/*.png
 figures/*.jpg

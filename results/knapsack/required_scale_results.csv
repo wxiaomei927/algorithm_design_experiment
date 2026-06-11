@@ -1,0 +1,181 @@
+n,capacity,seed,algorithm,total_weight,total_value,elapsed_ms,estimated_memory_bytes,estimated_operations,visited_nodes,status,note
+1000,10000,20261801,brute_force,,,,4072,0,,skipped,skipped because brute force is O(2^n)
+1000,10000,20261801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+1000,10000,20261801,dynamic_programming_optimized,10000,127424.22,8.278500,1334133,10000000,0,completed,
+1000,10000,20261801,greedy,9994,127384.18,0.001000,28000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+1000,100000,20261801,brute_force,,,,4072,0,,skipped,skipped because brute force is O(2^n)
+1000,100000,20261801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+1000,100000,20261801,dynamic_programming_optimized,48912,267774.93,89.626900,13304133,100000000,0,completed,
+1000,100000,20261801,greedy,48912,267774.93,0.002400,28000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+1000,1000000,20261801,brute_force,,,,4072,0,,skipped,skipped because brute force is O(2^n)
+1000,1000000,20261801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+1000,1000000,20261801,dynamic_programming_optimized,,,,133004133,1000000000,,skipped,skipped because estimated DP operations exceed safe limit
+1000,1000000,20261801,greedy,48912,267774.93,0.001600,28000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+2000,10000,20262801,brute_force,,,,8072,0,,skipped,skipped because brute force is O(2^n)
+2000,10000,20262801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+2000,10000,20262801,dynamic_programming_optimized,10000,176585.21,12.471000,2588258,20000000,0,completed,
+2000,10000,20262801,greedy,9992,176514.19,0.003200,56000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+2000,100000,20262801,brute_force,,,,8072,0,,skipped,skipped because brute force is O(2^n)
+2000,100000,20262801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+2000,100000,20262801,dynamic_programming_optimized,100000,531881.09,187.373500,25808258,200000000,0,completed,
+2000,100000,20262801,greedy,99994,531878.81,0.001400,56000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+2000,1000000,20262801,brute_force,,,,8072,0,,skipped,skipped because brute force is O(2^n)
+2000,1000000,20262801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+2000,1000000,20262801,dynamic_programming_optimized,,,,258008258,2000000000,,skipped,skipped because estimated DP operations exceed safe limit
+2000,1000000,20262801,greedy,100559,532500.16,0.003500,56000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+3000,10000,20263801,brute_force,,,,12072,0,,skipped,skipped because brute force is O(2^n)
+3000,10000,20263801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+3000,10000,20263801,dynamic_programming_optimized,10000,215258.00,18.099200,3842383,30000000,0,completed,
+3000,10000,20263801,greedy,9999,215249.57,0.003500,84000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+3000,100000,20263801,brute_force,,,,12072,0,,skipped,skipped because brute force is O(2^n)
+3000,100000,20263801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+3000,100000,20263801,dynamic_programming_optimized,100000,674232.23,281.519000,38312383,300000000,0,completed,
+3000,100000,20263801,greedy,100000,674232.23,0.002000,84000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+3000,1000000,20263801,brute_force,,,,12072,0,,skipped,skipped because brute force is O(2^n)
+3000,1000000,20263801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+3000,1000000,20263801,dynamic_programming_optimized,,,,383012383,3000000000,,skipped,skipped because estimated DP operations exceed safe limit
+3000,1000000,20263801,greedy,152960,790082.97,0.002700,84000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+4000,10000,20264801,brute_force,,,,16072,0,,skipped,skipped because brute force is O(2^n)
+4000,10000,20264801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+4000,10000,20264801,dynamic_programming_optimized,10000,250525.36,22.976600,5096508,40000000,0,completed,
+4000,10000,20264801,greedy,9999,250512.89,0.009600,112000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+4000,100000,20264801,brute_force,,,,16072,0,,skipped,skipped because brute force is O(2^n)
+4000,100000,20264801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+4000,100000,20264801,dynamic_programming_optimized,100000,788962.55,331.501000,50816508,400000000,0,completed,
+4000,100000,20264801,greedy,100000,788953.41,0.002600,112000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+4000,1000000,20264801,brute_force,,,,16072,0,,skipped,skipped because brute force is O(2^n)
+4000,1000000,20264801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+4000,1000000,20264801,dynamic_programming_optimized,,,,508016508,4000000000,,skipped,skipped because estimated DP operations exceed safe limit
+4000,1000000,20264801,greedy,203413,1061302.16,0.007600,112000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+5000,10000,20265801,brute_force,,,,20072,0,,skipped,skipped because brute force is O(2^n)
+5000,10000,20265801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+5000,10000,20265801,dynamic_programming_optimized,10000,269219.66,26.811800,6350633,50000000,0,completed,
+5000,10000,20265801,greedy,9997,269178.64,0.004600,140000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+5000,100000,20265801,brute_force,,,,20072,0,,skipped,skipped because brute force is O(2^n)
+5000,100000,20265801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+5000,100000,20265801,dynamic_programming_optimized,100000,879722.96,378.200000,63320633,500000000,0,completed,
+5000,100000,20265801,greedy,99997,879708.95,0.002600,140000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+5000,1000000,20265801,brute_force,,,,20072,0,,skipped,skipped because brute force is O(2^n)
+5000,1000000,20265801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+5000,1000000,20265801,dynamic_programming_optimized,,,,633020633,5000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+5000,1000000,20265801,greedy,253055,1314460.57,0.009100,140000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+6000,10000,20266801,brute_force,,,,24072,0,,skipped,skipped because brute force is O(2^n)
+6000,10000,20266801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+6000,10000,20266801,dynamic_programming_optimized,10000,306185.51,31.785800,7604758,60000000,0,completed,
+6000,10000,20266801,greedy,9995,306109.26,0.005200,168000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+6000,100000,20266801,brute_force,,,,24072,0,,skipped,skipped because brute force is O(2^n)
+6000,100000,20266801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+6000,100000,20266801,dynamic_programming_optimized,,,,75824758,600000000,,skipped,skipped because estimated DP operations exceed safe limit
+6000,100000,20266801,greedy,100000,974922.60,0.010700,168000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+6000,1000000,20266801,brute_force,,,,24072,0,,skipped,skipped because brute force is O(2^n)
+6000,1000000,20266801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+6000,1000000,20266801,dynamic_programming_optimized,,,,758024758,6000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+6000,1000000,20266801,greedy,299279,1585633.53,0.005200,168000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+7000,10000,20267801,brute_force,,,,28072,0,,skipped,skipped because brute force is O(2^n)
+7000,10000,20267801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+7000,10000,20267801,dynamic_programming_optimized,10000,324314.68,36.530800,8858883,70000000,0,completed,
+7000,10000,20267801,greedy,9994,324215.09,0.007600,196000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+7000,100000,20267801,brute_force,,,,28072,0,,skipped,skipped because brute force is O(2^n)
+7000,100000,20267801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+7000,100000,20267801,dynamic_programming_optimized,,,,88328883,700000000,,skipped,skipped because estimated DP operations exceed safe limit
+7000,100000,20267801,greedy,99981,1037907.38,0.009900,196000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+7000,1000000,20267801,brute_force,,,,28072,0,,skipped,skipped because brute force is O(2^n)
+7000,1000000,20267801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+7000,1000000,20267801,dynamic_programming_optimized,,,,883028883,7000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+7000,1000000,20267801,greedy,354378,1850857.39,0.012700,196000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+8000,10000,20268801,brute_force,,,,32072,0,,skipped,skipped because brute force is O(2^n)
+8000,10000,20268801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+8000,10000,20268801,dynamic_programming_optimized,10000,342441.75,41.088800,10113008,80000000,0,completed,
+8000,10000,20268801,greedy,10000,342439.77,0.006400,224000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+8000,100000,20268801,brute_force,,,,32072,0,,skipped,skipped because brute force is O(2^n)
+8000,100000,20268801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+8000,100000,20268801,dynamic_programming_optimized,,,,100833008,800000000,,skipped,skipped because estimated DP operations exceed safe limit
+8000,100000,20268801,greedy,99986,1106436.66,0.014100,224000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+8000,1000000,20268801,brute_force,,,,32072,0,,skipped,skipped because brute force is O(2^n)
+8000,1000000,20268801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+8000,1000000,20268801,dynamic_programming_optimized,,,,1008033008,8000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+8000,1000000,20268801,greedy,403716,2111973.76,0.021500,224000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+9000,10000,20269801,brute_force,,,,36072,0,,skipped,skipped because brute force is O(2^n)
+9000,10000,20269801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+9000,10000,20269801,dynamic_programming_optimized,10000,367121.03,42.767400,11367133,90000000,0,completed,
+9000,10000,20269801,greedy,9999,367102.85,0.009200,252000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+9000,100000,20269801,brute_force,,,,36072,0,,skipped,skipped because brute force is O(2^n)
+9000,100000,20269801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+9000,100000,20269801,dynamic_programming_optimized,,,,113337133,900000000,,skipped,skipped because estimated DP operations exceed safe limit
+9000,100000,20269801,greedy,99994,1188889.94,0.009400,252000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+9000,1000000,20269801,brute_force,,,,36072,0,,skipped,skipped because brute force is O(2^n)
+9000,1000000,20269801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+9000,1000000,20269801,dynamic_programming_optimized,,,,1133037133,9000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+9000,1000000,20269801,greedy,453800,2372691.21,0.010800,252000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+10000,10000,20270801,brute_force,,,,40072,0,,skipped,skipped because brute force is O(2^n)
+10000,10000,20270801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+10000,10000,20270801,dynamic_programming_optimized,10000,370976.86,45.717800,12621258,100000000,0,completed,
+10000,10000,20270801,greedy,9999,370955.93,0.009000,280000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+10000,100000,20270801,brute_force,,,,40072,0,,skipped,skipped because brute force is O(2^n)
+10000,100000,20270801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+10000,100000,20270801,dynamic_programming_optimized,,,,125841258,1000000000,,skipped,skipped because estimated DP operations exceed safe limit
+10000,100000,20270801,greedy,99985,1221940.74,0.017600,280000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+10000,1000000,20270801,brute_force,,,,40072,0,,skipped,skipped because brute force is O(2^n)
+10000,1000000,20270801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+10000,1000000,20270801,dynamic_programming_optimized,,,,1258041258,10000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+10000,1000000,20270801,greedy,506082,2629073.28,0.018300,280000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+20000,10000,20280801,brute_force,,,,80072,0,,skipped,skipped because brute force is O(2^n)
+20000,10000,20280801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+20000,10000,20280801,dynamic_programming_optimized,10000,542791.46,84.097700,25162508,200000000,0,completed,
+20000,10000,20280801,greedy,9999,542762.17,0.016400,560000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+20000,100000,20280801,brute_force,,,,80072,0,,skipped,skipped because brute force is O(2^n)
+20000,100000,20280801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+20000,100000,20280801,dynamic_programming_optimized,,,,250882508,2000000000,,skipped,skipped because estimated DP operations exceed safe limit
+20000,100000,20280801,greedy,99998,1767333.43,0.028100,560000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+20000,1000000,20280801,brute_force,,,,80072,0,,skipped,skipped because brute force is O(2^n)
+20000,1000000,20280801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+20000,1000000,20280801,dynamic_programming_optimized,,,,2508082508,20000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+20000,1000000,20280801,greedy,999430,5292818.60,0.049600,560000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+40000,10000,20300801,brute_force,,,,160072,0,,skipped,skipped because brute force is O(2^n)
+40000,10000,20300801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+40000,10000,20300801,dynamic_programming_optimized,10000,750080.96,158.365400,50245008,400000000,0,completed,
+40000,10000,20300801,greedy,10000,750080.96,0.053300,1120000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+40000,100000,20300801,brute_force,,,,160072,0,,skipped,skipped because brute force is O(2^n)
+40000,100000,20300801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+40000,100000,20300801,dynamic_programming_optimized,,,,500965008,4000000000,,skipped,skipped because estimated DP operations exceed safe limit
+40000,100000,20300801,greedy,99993,2468798.95,0.065400,1120000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+40000,1000000,20300801,brute_force,,,,160072,0,,skipped,skipped because brute force is O(2^n)
+40000,1000000,20300801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+40000,1000000,20300801,dynamic_programming_optimized,,,,5008165008,40000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+40000,1000000,20300801,greedy,999979,7893594.51,0.069300,1120000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+80000,10000,20340801,brute_force,,,,320072,0,,skipped,skipped because brute force is O(2^n)
+80000,10000,20340801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+80000,10000,20340801,dynamic_programming_optimized,,,,100410008,800000000,,skipped,skipped because estimated DP operations exceed safe limit
+80000,10000,20340801,greedy,10000,1016942.88,0.103200,2240000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+80000,100000,20340801,brute_force,,,,320072,0,,skipped,skipped because brute force is O(2^n)
+80000,100000,20340801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+80000,100000,20340801,dynamic_programming_optimized,,,,1001130008,8000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+80000,100000,20340801,greedy,99998,3429377.56,0.100400,2240000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+80000,1000000,20340801,brute_force,,,,320072,0,,skipped,skipped because brute force is O(2^n)
+80000,1000000,20340801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+80000,1000000,20340801,dynamic_programming_optimized,,,,10008330008,80000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+80000,1000000,20340801,greedy,999999,11088678.11,0.146700,2240000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+160000,10000,20420801,brute_force,,,,640072,0,,skipped,skipped because brute force is O(2^n)
+160000,10000,20420801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+160000,10000,20420801,dynamic_programming_optimized,,,,200740008,1600000000,,skipped,skipped because estimated DP operations exceed safe limit
+160000,10000,20420801,greedy,10000,1378160.97,0.231000,4480000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+160000,100000,20420801,brute_force,,,,640072,0,,skipped,skipped because brute force is O(2^n)
+160000,100000,20420801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+160000,100000,20420801,dynamic_programming_optimized,,,,2001460008,16000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+160000,100000,20420801,greedy,100000,4793848.72,0.352800,4480000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+160000,1000000,20420801,brute_force,,,,640072,0,,skipped,skipped because brute force is O(2^n)
+160000,1000000,20420801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+160000,1000000,20420801,dynamic_programming_optimized,,,,20008660008,160000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+160000,1000000,20420801,greedy,1000000,15643142.61,0.238100,4480000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+320000,10000,20580801,brute_force,,,,1280072,0,,skipped,skipped because brute force is O(2^n)
+320000,10000,20580801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+320000,10000,20580801,dynamic_programming_optimized,,,,401400008,3200000000,,skipped,skipped because estimated DP operations exceed safe limit
+320000,10000,20580801,greedy,10000,1844758.18,0.454100,8960000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+320000,100000,20580801,brute_force,,,,1280072,0,,skipped,skipped because brute force is O(2^n)
+320000,100000,20580801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+320000,100000,20580801,dynamic_programming_optimized,,,,4002120008,32000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+320000,100000,20580801,greedy,99999,6629029.75,0.625600,8960000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
+320000,1000000,20580801,brute_force,,,,1280072,0,,skipped,skipped because brute force is O(2^n)
+320000,1000000,20580801,backtracking,,,,0,0,,skipped,skipped because backtracking worst-case complexity is O(2^n)
+320000,1000000,20580801,dynamic_programming_optimized,,,,40009320008,320000000000,,skipped,skipped because estimated DP memory exceeds 512 MB
+320000,1000000,20580801,greedy,999994,21947123.03,0.516700,8960000,0,0,completed,approximation strategy; not guaranteed to be globally optimal for 0-1 knapsack
