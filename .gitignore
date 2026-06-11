@@ -21,6 +21,8 @@ results/knapsack/*.csv
 
 # 保留正式实验数据
 !data/knapsack/required_items_1000.csv
+!data/sorting/random_set_1.csv
+!data/sorting/random_set_2.csv
 !results/knapsack/required_scale_results.csv
 !results/knapsack/required_solution_quality.csv
 !results/knapsack/required_selected_items.csv
@@ -47,3 +49,8 @@ docs/*_draft.md
 
 # 调试日志
 debug.log
+
+# 本地备份目录
+data_backup/
+results_backup/
+deliverables/
